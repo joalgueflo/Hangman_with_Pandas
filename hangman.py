@@ -10,8 +10,10 @@ init(autoreset=True)
 
 
 
-#LUEGO AGREGAR LA FUNCIÓN DE QUE EL USUARIO PUEDA AGREGAR PALABRAS SECRETAS AL DOCUMENTO A TRAVES DE LA TERMINAL
-#Por ultimo, probar pyscript
+
+#Im looking to make a function where the player can add new words to a forth sheet and it saves in listas.xlsx
+
+#And finally try and use pyscript
 
 
 
@@ -94,7 +96,7 @@ def spaces(word):
 #Function which reads the excel file and depending on the players choice, returns a random word of themes Soccer, Videogames or Movies
 def secretWord(selection):
     #Reads the excel file
-    path_excel = "/Users/joseguerrero/Documents/PracticaPrsonalCodigos/listas.xlsx"
+    path_excel = "listas.xlsx"
     #Reads and separates each worksheet
     paginaFutbol = pd.read_excel(path_excel,sheet_name= 'Futbol' )
     paginaVideojuegos = pd.read_excel(path_excel,sheet_name= 'VideoJuegos' )
