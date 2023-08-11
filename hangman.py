@@ -43,7 +43,6 @@ def main():
     
     print()
     print(blank)
-    print(word)
     hangman(word,blank)
     
 
@@ -203,6 +202,8 @@ def hangman(word,blank):
             # Check if the player still has attempts left (maximum attempts = 6, since there are 7 hangman drawings).
             if attempts == 6:
                 print("GAME OVER")
+                print("The word was: ", end="")
+                print(*word_list)
                 break
             if "_" not in blank_list:
                 print("¡Ya ganaste!")
@@ -234,7 +235,7 @@ def hangman(word,blank):
                     attempts += 1
             # Display the current state of the word to guess (with correctly guessed letters) and the hangman drawing.
             print("-----------------------------------------", attempts ,"------------------------------------------------")
-            print(" ".join(blank_list))
+            print(*blank_list)
             print()
             print(hangman[attempts])
         except ValueError:
